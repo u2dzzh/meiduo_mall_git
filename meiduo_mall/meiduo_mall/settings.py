@@ -192,3 +192,9 @@ LOGGING = {
         },
     }
 }
+
+######### 替换user模型 ######
+# 某些类型的项目可能有特殊的认证需求，Django内建的User模型不可能总是适用。 例如，在某些网站上使用邮件地址而不是用户名作为身份的标识可能更合理。
+# 通过提供一个值给AUTH_USER_MODEL设置，指向自定义的模型，Django允许你覆盖默认的User模型：
+AUTH_USER_MODEL = 'users.User'
+# 这个点式路径包含Django应用的名称（必须位于你的INSTALLED_APPS中），和要用作User模型的Django模型的名称。
