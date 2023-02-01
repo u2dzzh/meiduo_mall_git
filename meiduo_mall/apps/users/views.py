@@ -31,3 +31,21 @@ class UsernameCountView(View):
             'count': count,
             'errmsg': 'ok',
         })
+
+"""
+用户注册业务逻辑实现    
+前端:     当用户输入 用户名, 密码, 确认密码, 手机号, 是否同意协议之后, 会点击注册按钮
+        前端会发送Axios请求
+
+后端:     请求:     接收请求(JSON), 获取数据
+         业务逻辑:  验证数据, 数据入库
+         响应:      JSON{'code':9, 'errmsg':'ok'
+         
+路由:    POST    register/
+
+步骤:    1.接收请求(POST_JSON)
+        2.获取数据
+        3.验证数据
+        4.数据入库
+        5.返回响应
+"""
